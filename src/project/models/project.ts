@@ -1,7 +1,9 @@
 export class Project {
-    name: string;
+  name: string;
+  collaborators: string[] = [];
 
-    constructor(name: string) {
-        this.name = name;
-    }
+  constructor(name: string, collaborators: string[] = []) {
+    this.name = name;
+    this.collaborators = collaborators || [];
+  }
 }
