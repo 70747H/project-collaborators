@@ -10,5 +10,6 @@ describe('project', () => {
 
     // Assert
     expect(project.name).toBe(projectName);
+    expect(project.collaborators).toEqual([]);
   });
 });

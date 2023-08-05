@@ -12,6 +12,6 @@ describe('Controller::createProject', () => {
     createProjectController(req, res);
 
     // Assert
-    expect(res.send).toHaveBeenCalledWith({ name });
+    expect(res.send).toHaveBeenCalledWith({ name, collaborators: [] });
   });
 });

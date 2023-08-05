@@ -35,4 +35,17 @@ describe('Repository::Project', () => {
     // Assert
     expect(project.name).toBe('Project 1');
   });
+
+  it('should add collaborator to a project with a specific id and return the updated project', function () {
+    // Act
+    const email = 'paul_emile@gmail.com';
+    const project = ProjectRepository.addCollaborator(
+      0,
+      'paul_emile@gmail.com'
+    );
+
+    // Assert
+    expect(project.name).toBe('Project 1');
+    expect(project.collaborators).toEqual([email]);
+  });
 });

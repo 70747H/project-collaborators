@@ -6,5 +6,6 @@ export const createProjectController = async (req: Request, res: Response) => {
   const { name } = req.body;
   const project = new Project(name);
   ProjectRepository.save(project);
+
   res.send(project);
 };
